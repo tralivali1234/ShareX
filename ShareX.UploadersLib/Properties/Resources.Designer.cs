@@ -81,6 +81,16 @@ namespace ShareX.UploadersLib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AzureStorage {
+            get {
+                object obj = ResourceManager.GetObject("AzureStorage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon Bitly {
@@ -212,6 +222,16 @@ namespace ShareX.UploadersLib.Properties {
             get {
                 object obj = ResourceManager.GetObject("Gett", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gfycat {
+            get {
+                object obj = ResourceManager.GetObject("Gfycat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -469,6 +489,16 @@ namespace ShareX.UploadersLib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pastie {
+            get {
+                object obj = ResourceManager.GetObject("Pastie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon Photobucket {
@@ -484,6 +514,16 @@ namespace ShareX.UploadersLib.Properties {
         internal static System.Drawing.Icon Picasa {
             get {
                 object obj = ResourceManager.GetObject("Picasa", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Plik {
+            get {
+                object obj = ResourceManager.GetObject("Plik", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
@@ -653,16 +693,6 @@ namespace ShareX.UploadersLib.Properties {
         internal static string UploadersConfigForm_BoxListFolders_Box_refresh_folders_list_failed {
             get {
                 return ResourceManager.GetString("UploadersConfigForm_BoxListFolders_Box_refresh_folders_list_failed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Login successful but getting account info failed..
-        /// </summary>
-        internal static string UploadersConfigForm_DropboxAuthComplete_Login_successful_but_getting_account_info_failed_ {
-            get {
-                return ResourceManager.GetString("UploadersConfigForm_DropboxAuthComplete_Login_successful_but_getting_account_info" +
-                        "_failed_", resourceCulture);
             }
         }
         
@@ -872,51 +902,6 @@ namespace ShareX.UploadersLib.Properties {
         internal static string UploadersConfigForm_TestFTPAccount_Connected_Created_folders {
             get {
                 return ResourceManager.GetString("UploadersConfigForm_TestFTPAccount_Connected_Created_folders", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Download path:.
-        /// </summary>
-        internal static string UploadersConfigForm_UpdateDropboxStatus_Download_path_ {
-            get {
-                return ResourceManager.GetString("UploadersConfigForm_UpdateDropboxStatus_Download_path_", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Email:.
-        /// </summary>
-        internal static string UploadersConfigForm_UpdateDropboxStatus_Email_ {
-            get {
-                return ResourceManager.GetString("UploadersConfigForm_UpdateDropboxStatus_Email_", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Name:.
-        /// </summary>
-        internal static string UploadersConfigForm_UpdateDropboxStatus_Name_ {
-            get {
-                return ResourceManager.GetString("UploadersConfigForm_UpdateDropboxStatus_Name_", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Upload path:.
-        /// </summary>
-        internal static string UploadersConfigForm_UpdateDropboxStatus_Upload_path_ {
-            get {
-                return ResourceManager.GetString("UploadersConfigForm_UpdateDropboxStatus_Upload_path_", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to User ID:.
-        /// </summary>
-        internal static string UploadersConfigForm_UpdateDropboxStatus_User_ID_ {
-            get {
-                return ResourceManager.GetString("UploadersConfigForm_UpdateDropboxStatus_User_ID_", resourceCulture);
             }
         }
         

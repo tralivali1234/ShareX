@@ -144,9 +144,6 @@
   <data name="ClipboardContentViewer_ClipboardContentViewer_Load_Clipboard_is_empty_or_contains_unknown_data_" xml:space="preserve">
     <value>Буфер пуст либо содержит неизвестную информацию.</value>
   </data>
-  <data name="RegistryHelpers_ShellExtDesc_Upload_with__0_" xml:space="preserve">
-    <value>Загрузить через {0}</value>
-  </data>
   <data name="PrintTextForm_LoadSettings_Name___0___Size___1_" xml:space="preserve">
     <value>Имя: {0}, Размер: {1}</value>
   </data>
@@ -869,7 +866,7 @@
     <value>Рисование: Стрелка</value>
   </data>
   <data name="ShapeType_EffectBlur" xml:space="preserve">
-    <value>Эффект: размытие</value>
+    <value>Эффект: Размытие</value>
   </data>
   <data name="ShapeType_DrawingEllipse" xml:space="preserve">
     <value>Рисование: Эллипс</value>
@@ -886,23 +883,14 @@
   <data name="ShapeType_DrawingRectangle" xml:space="preserve">
     <value>Рисование: Прямоугольник</value>
   </data>
-  <data name="ShapeType_DrawingRoundedRectangle" xml:space="preserve">
-    <value>Рисование: Скругленный прямоугольник</value>
-  </data>
   <data name="ShapeType_DrawingStep" xml:space="preserve">
     <value>Рисование: Шаг</value>
-  </data>
-  <data name="ShapeType_DrawingText" xml:space="preserve">
-    <value>Рисование: Текст</value>
   </data>
   <data name="ShapeType_RegionEllipse" xml:space="preserve">
     <value>Область: Эллипс</value>
   </data>
   <data name="ShapeType_RegionRectangle" xml:space="preserve">
     <value>Область: Прямоугольник</value>
-  </data>
-  <data name="ShapeType_RegionRoundedRectangle" xml:space="preserve">
-    <value>Область: Скругленный прямоугольник</value>
   </data>
   <data name="ShapeType_RegionFreehand" xml:space="preserve">
     <value>Область: От руки</value>
@@ -957,5 +945,32 @@
   </data>
   <data name="ShapeType_DrawingSpeechBalloon" xml:space="preserve">
     <value>Рисование: Сноска</value>
+  </data>
+  <data name="HotkeyType_ToggleActionsToolbar" xml:space="preserve">
+    <value>Переключить панель действий</value>
+  </data>
+  <data name="HotkeyType_ExitShareX" xml:space="preserve">
+    <value>Выйти из ShareX</value>
+  </data>
+  <data name="ShapeType_DrawingTextOutline" xml:space="preserve">
+    <value>Рисование: Текст с обводкой</value>
+  </data>
+  <data name="ShapeType_DrawingTextBackground" xml:space="preserve">
+    <value>Рисование: Текст с фоном</value>
+  </data>
+  <data name="HotkeyType_ToggleActionsToolbar_Category" xml:space="preserve">
+    <value>Другие</value>
+  </data>
+  <data name="HotkeyType_ExitShareX_Category" xml:space="preserve">
+    <value>Другие</value>
+  </data>
+  <data name="DownloaderForm_Download_Canceled" xml:space="preserve">
+    <value>Загрузка отменена.</value>
+  </data>
+  <data name="DownloaderForm_ProxyDetected" xml:space="preserve">
+    <value>Возможно используется прокси. Откройте Настройки приложения из главного меню и выберите Прокси для ввода настроек своего прокси сервера.</value>
+  </data>
+  <data name="DownloaderForm_ChangeProgress_Progress___0_" xml:space="preserve">
+    <value>Прогресс: {0}</value>
   </data>
 </root>

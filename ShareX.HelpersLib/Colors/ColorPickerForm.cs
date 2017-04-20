@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2016 ShareX Team
+    Copyright (c) 2007-2017 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -67,7 +67,7 @@ namespace ShareX.HelpersLib
         public void SetCurrentColor(Color currentColor, bool keepPreviousColor)
         {
             oldColorExist = keepPreviousColor;
-            colorPicker.DrawCrosshair = lblOld.Visible = oldColorExist;
+            lblOld.Visible = oldColorExist;
             NewColor = OldColor = currentColor;
             colorPicker.ChangeColor(currentColor);
             nudAlpha.SetValue(currentColor.A);

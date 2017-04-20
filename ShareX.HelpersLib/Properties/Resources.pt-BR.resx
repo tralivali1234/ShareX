@@ -171,9 +171,6 @@
   <data name="ClipboardContentViewer_ClipboardContentViewer_Load_Clipboard_is_empty_or_contains_unknown_data_" xml:space="preserve">
     <value>Área de transferência está vazia ou possui dados desconhecidos.</value>
   </data>
-  <data name="RegistryHelpers_ShellExtDesc_Upload_with__0_" xml:space="preserve">
-    <value>Enviar com {0}</value>
-  </data>
   <data name="PrintTextForm_LoadSettings_Name___0___Size___1_" xml:space="preserve">
     <value>Nome: {0}, Tamanho: {1}</value>
   </data>
@@ -865,23 +862,14 @@ Gostaria de baixá-la?</value>
   <data name="ShapeType_DrawingRectangle" xml:space="preserve">
     <value>Desenho: Retângulo</value>
   </data>
-  <data name="ShapeType_DrawingRoundedRectangle" xml:space="preserve">
-    <value>Desenho: Retângulo arredondado</value>
-  </data>
   <data name="ShapeType_DrawingStep" xml:space="preserve">
     <value>Desenho: Passo</value>
-  </data>
-  <data name="ShapeType_DrawingText" xml:space="preserve">
-    <value>Desenho: Texto</value>
   </data>
   <data name="ShapeType_RegionEllipse" xml:space="preserve">
     <value>Região: Elipse</value>
   </data>
   <data name="ShapeType_RegionRectangle" xml:space="preserve">
     <value>Região: Retângulo</value>
-  </data>
-  <data name="ShapeType_RegionRoundedRectangle" xml:space="preserve">
-    <value>Região: Retângulo arredondado</value>
   </data>
   <data name="RegionCaptureAction_RemoveShape" xml:space="preserve">
     <value>Remover forma</value>

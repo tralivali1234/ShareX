@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2016 ShareX Team
+    Copyright (c) 2007-2017 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -284,6 +284,10 @@ namespace ShareX.HelpersLib
 
         #region kernel32.dll
 
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto)]
+        public static extern bool CreateProcess(string lpApplicationName, string lpCommandLine, ref SECURITY_ATTRIBUTES lpProcessAttributes, ref SECURITY_ATTRIBUTES lpThreadAttributes,
+            bool bInheritHandles, uint dwCreationFlags, IntPtr lpEnvironment, string lpCurrentDirectory, [In] ref STARTUPINFO lpStartupInfo, out PROCESS_INFORMATION lpProcessInformation);
+
         [DllImport("kernel32.dll")]
         public static extern int ResumeThread(IntPtr hThread);
 
@@ -374,6 +378,9 @@ namespace ShareX.HelpersLib
 
         [DllImport("shell32.dll")]
         public static extern int SHOpenFolderAndSelectItems(IntPtr pidlFolder, int cild, IntPtr apidl, int dwFlags);
+
+        [DllImport("shell32.dll")]
+        public static extern void SHChangeNotify(HChangeNotifyEventID wEventId, HChangeNotifyFlags uFlags, IntPtr dwItem1, IntPtr dwItem2);
 
         [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
         public static extern IntPtr ILCreateFromPathW(string pszPath);

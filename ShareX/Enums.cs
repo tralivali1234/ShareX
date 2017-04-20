@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2016 ShareX Team
+    Copyright (c) 2007-2017 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -60,6 +60,8 @@ namespace ShareX
         SimplifiedChinese,
         [Description("Español (Spanish)")]
         Spanish,
+        [Description("繁體中文 (Traditional Chinese)")]
+        TraditionalChinese,
         [Description("Türkçe (Turkish)")]
         Turkish,
         [Description("Tiếng Việt (Vietnamese)")]
@@ -199,7 +201,9 @@ namespace ShareX
         OpenMainWindow,
         OpenScreenshotsFolder,
         OpenHistory,
-        OpenImageHistory
+        OpenImageHistory,
+        ToggleActionsToolbar,
+        ExitShareX
     }
 
     public enum PopUpNotificationType // Localized
@@ -244,5 +248,10 @@ namespace ShareX
     public enum ScreenRecordState
     {
         Waiting, BeforeStart, AfterStart, AfterRecordingStart, AfterStop
+    }
+
+    public enum RegionCaptureType
+    {
+        Default, Light, Transparent
     }
 }

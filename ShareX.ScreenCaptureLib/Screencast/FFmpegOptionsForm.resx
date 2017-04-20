@@ -455,7 +455,7 @@ Otherwise it can't keep up with recording and a lot of frame drops will happen.<
     <value>120, 20</value>
   </data>
   <data name="cboVideoCodec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 21</value>
+    <value>160, 21</value>
   </data>
   <data name="cboVideoCodec.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -617,7 +617,7 @@ Otherwise it can't keep up with recording and a lot of frame drops will happen.<
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gbFFmpegExe.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="cbOverrideFFmpegPath.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -731,34 +731,7 @@ Otherwise it can't keep up with recording and a lot of frame drops will happen.<
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gbCommandLinePreview.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="btnFFmpegHelp.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="btnFFmpegHelp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>616, 23</value>
-  </data>
-  <data name="btnFFmpegHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 23</value>
-  </data>
-  <data name="btnFFmpegHelp.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnFFmpegHelp.Text" xml:space="preserve">
-    <value>?</value>
-  <comment>@Invariant</comment></data>
-  <data name="&gt;&gt;btnFFmpegHelp.Name" xml:space="preserve">
-    <value>btnFFmpegHelp</value>
-  </data>
-  <data name="&gt;&gt;btnFFmpegHelp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnFFmpegHelp.Parent" xml:space="preserve">
-    <value>gbCommandLineArgs</value>
-  </data>
-  <data name="&gt;&gt;btnFFmpegHelp.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="tbUserArgs.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -767,7 +740,7 @@ Otherwise it can't keep up with recording and a lot of frame drops will happen.<
     <value>8, 24</value>
   </data>
   <data name="tbUserArgs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 20</value>
+    <value>632, 20</value>
   </data>
   <data name="tbUserArgs.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -782,7 +755,7 @@ Otherwise it can't keep up with recording and a lot of frame drops will happen.<
     <value>gbCommandLineArgs</value>
   </data>
   <data name="&gt;&gt;tbUserArgs.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="gbCommandLineArgs.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 340</value>
@@ -806,7 +779,7 @@ Otherwise it can't keep up with recording and a lot of frame drops will happen.<
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gbCommandLineArgs.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="tpX264.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -964,6 +937,132 @@ Otherwise it can't keep up with recording and a lot of frame drops will happen.<
   <data name="&gt;&gt;tpXvid.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="cbNVENCPreset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 12</value>
+  </data>
+  <data name="cbNVENCPreset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 21</value>
+  </data>
+  <data name="cbNVENCPreset.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cbNVENCPreset.Name" xml:space="preserve">
+    <value>cbNVENCPreset</value>
+  </data>
+  <data name="&gt;&gt;cbNVENCPreset.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbNVENCPreset.Parent" xml:space="preserve">
+    <value>tpNVENC</value>
+  </data>
+  <data name="&gt;&gt;cbNVENCPreset.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblNVENCPreset.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNVENCPreset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="lblNVENCPreset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
+  </data>
+  <data name="lblNVENCPreset.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblNVENCPreset.Text" xml:space="preserve">
+    <value>Preset:</value>
+  </data>
+  <data name="&gt;&gt;lblNVENCPreset.Name" xml:space="preserve">
+    <value>lblNVENCPreset</value>
+  </data>
+  <data name="&gt;&gt;lblNVENCPreset.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNVENCPreset.Parent" xml:space="preserve">
+    <value>tpNVENC</value>
+  </data>
+  <data name="&gt;&gt;lblNVENCPreset.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="nudNVENCBitrate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>96, 36</value>
+  </data>
+  <data name="nudNVENCBitrate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="nudNVENCBitrate.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="nudNVENCBitrate.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;nudNVENCBitrate.Name" xml:space="preserve">
+    <value>nudNVENCBitrate</value>
+  </data>
+  <data name="&gt;&gt;nudNVENCBitrate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nudNVENCBitrate.Parent" xml:space="preserve">
+    <value>tpNVENC</value>
+  </data>
+  <data name="&gt;&gt;nudNVENCBitrate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblNVENCBitrate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblNVENCBitrate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 40</value>
+  </data>
+  <data name="lblNVENCBitrate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 13</value>
+  </data>
+  <data name="lblNVENCBitrate.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblNVENCBitrate.Text" xml:space="preserve">
+    <value>Bitrate:</value>
+  </data>
+  <data name="&gt;&gt;lblNVENCBitrate.Name" xml:space="preserve">
+    <value>lblNVENCBitrate</value>
+  </data>
+  <data name="&gt;&gt;lblNVENCBitrate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNVENCBitrate.Parent" xml:space="preserve">
+    <value>tpNVENC</value>
+  </data>
+  <data name="&gt;&gt;lblNVENCBitrate.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tpNVENC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tpNVENC.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpNVENC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>304, 70</value>
+  </data>
+  <data name="tpNVENC.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tpNVENC.Text" xml:space="preserve">
+    <value>NVENC</value>
+  </data>
+  <data name="&gt;&gt;tpNVENC.Name" xml:space="preserve">
+    <value>tpNVENC</value>
+  </data>
+  <data name="&gt;&gt;tpNVENC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpNVENC.Parent" xml:space="preserve">
+    <value>tcFFmpegVideoCodecs</value>
+  </data>
+  <data name="&gt;&gt;tpNVENC.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="lblGIFDither.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1046,7 +1145,7 @@ Otherwise it can't keep up with recording and a lot of frame drops will happen.<
     <value>tcFFmpegVideoCodecs</value>
   </data>
   <data name="&gt;&gt;tpGIF.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="tcFFmpegVideoCodecs.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 56</value>
@@ -1091,7 +1190,7 @@ Otherwise it can't keep up with recording and a lot of frame drops will happen.<
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnTest.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="btnCopyPreview.Location" type="System.Drawing.Point, System.Drawing">
     <value>304, 404</value>
@@ -1115,7 +1214,7 @@ Otherwise it can't keep up with recording and a lot of frame drops will happen.<
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnCopyPreview.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="lblAACQuality.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1565,7 +1664,7 @@ Otherwise it can't keep up with recording and a lot of frame drops will happen.<
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gbSource.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="gbCodecs.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 168</value>
@@ -1589,34 +1688,10 @@ Otherwise it can't keep up with recording and a lot of frame drops will happen.<
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gbCodecs.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnHelp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>576, 512</value>
-  </data>
-  <data name="btnHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 24</value>
-  </data>
-  <data name="btnHelp.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="btnHelp.Text" xml:space="preserve">
-    <value>Help...</value>
-  </data>
-  <data name="&gt;&gt;btnHelp.Name" xml:space="preserve">
-    <value>btnHelp</value>
-  </data>
-  <data name="&gt;&gt;btnHelp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnHelp.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnHelp.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="eiFFmpeg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>384, 512</value>
+    <value>472, 512</value>
   </data>
   <data name="eiFFmpeg.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 24</value>
@@ -1665,5 +1740,9 @@ Otherwise it can't keep up with recording and a lot of frame drops will happen.<
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnFFmpegHelp.Text" xml:space="preserve">
+    <value></value>
+    <comment>@Invariant</comment>
   </data>
 </root>

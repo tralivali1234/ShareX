@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2016 ShareX Team
+    Copyright (c) 2007-2017 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -39,45 +39,15 @@ namespace ShareX.HelpersLib
         [JsonIgnore]
         public HotkeyStatus Status { get; set; }
 
-        public Keys KeyCode
-        {
-            get
-            {
-                return Hotkey & Keys.KeyCode;
-            }
-        }
+        public Keys KeyCode => Hotkey & Keys.KeyCode;
 
-        public Keys ModifiersKeys
-        {
-            get
-            {
-                return Hotkey & Keys.Modifiers;
-            }
-        }
+        public Keys ModifiersKeys => Hotkey & Keys.Modifiers;
 
-        public bool Control
-        {
-            get
-            {
-                return Hotkey.HasFlag(Keys.Control);
-            }
-        }
+        public bool Control => Hotkey.HasFlag(Keys.Control);
 
-        public bool Shift
-        {
-            get
-            {
-                return Hotkey.HasFlag(Keys.Shift);
-            }
-        }
+        public bool Shift => Hotkey.HasFlag(Keys.Shift);
 
-        public bool Alt
-        {
-            get
-            {
-                return Hotkey.HasFlag(Keys.Alt);
-            }
-        }
+        public bool Alt => Hotkey.HasFlag(Keys.Alt);
 
         public bool Win { get; set; }
 
@@ -96,21 +66,9 @@ namespace ShareX.HelpersLib
             }
         }
 
-        public bool IsOnlyModifiers
-        {
-            get
-            {
-                return KeyCode == Keys.ControlKey || KeyCode == Keys.ShiftKey || KeyCode == Keys.Menu || (KeyCode == Keys.None && Win);
-            }
-        }
+        public bool IsOnlyModifiers => KeyCode == Keys.ControlKey || KeyCode == Keys.ShiftKey || KeyCode == Keys.Menu || (KeyCode == Keys.None && Win);
 
-        public bool IsValidHotkey
-        {
-            get
-            {
-                return KeyCode != Keys.None && !IsOnlyModifiers;
-            }
-        }
+        public bool IsValidHotkey => KeyCode != Keys.None && !IsOnlyModifiers;
 
         public HotkeyInfo()
         {

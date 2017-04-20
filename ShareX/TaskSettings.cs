@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2016 ShareX Team
+    Copyright (c) 2007-2017 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -326,13 +326,12 @@ namespace ShareX
 
         public FFmpegOptions FFmpegOptions = new FFmpegOptions(Program.DefaultFFmpegFilePath);
         public int ScreenRecordFPS = 30;
-        public int GIFFPS = 10;
-        public ScreenRecordGIFEncoding GIFEncoding = ScreenRecordGIFEncoding.FFmpeg;
-        public bool ScreenRecordFixedDuration = false;
-        public float ScreenRecordDuration = 3f;
+        public int GIFFPS = 15;
+        public bool ScreenRecordShowCursor = true;
         public bool ScreenRecordAutoStart = true;
         public float ScreenRecordStartDelay = 0f;
-        public bool ScreenRecordShowCursor = true;
+        public bool ScreenRecordFixedDuration = false;
+        public float ScreenRecordDuration = 3f;
         public bool RunScreencastCLI = false;
         public int VideoEncoderSelected = 0;
 
@@ -395,7 +394,7 @@ namespace ShareX
         [Category("General"), DefaultValue(false), Description("If task contains upload job then this setting will clear clipboard when task start.")]
         public bool AutoClearClipboard { get; set; }
 
-        [Category("General"), DefaultValue(false), Description("Experimental setting to use ShareX region capture to annotate images instead of Greenshot image editor.")]
+        [Category("General"), DefaultValue(true), Description("Use built-in region capture annotation to annotate images instead of Greenshot image editor.")]
         public bool UseShareXForAnnotation { get; set; }
 
         [Category("Sound"), DefaultValue(false), Description("Enable/disable custom capture sound.")]
@@ -428,6 +427,9 @@ namespace ShareX
         [Category("Paths"), Description("Custom capture path takes precedence over path configured in Application configuration."),
         Editor(typeof(DirectoryNameEditor), typeof(UITypeEditor))]
         public string CapturePath { get; set; }
+
+        [Category("Capture"), DefaultValue(false), Description("Disable annotation support in region capture.")]
+        public bool RegionCaptureDisableAnnotation { get; set; }
 
         [Category("Upload"), Description("Files with these file extensions will be uploaded using image uploader."),
         Editor("System.Windows.Forms.Design.StringCollectionEditor,System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]

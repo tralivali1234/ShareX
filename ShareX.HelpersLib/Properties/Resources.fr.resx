@@ -141,9 +141,6 @@
   <data name="ClipboardContentViewer_ClipboardContentViewer_Load_Clipboard_is_empty_or_contains_unknown_data_" xml:space="preserve">
     <value>Le presse-papier est vide ou contient des données inconnues.</value>
   </data>
-  <data name="RegistryHelpers_ShellExtDesc_Upload_with__0_" xml:space="preserve">
-    <value>Mettre en ligne avec {0}</value>
-  </data>
   <data name="PrintTextForm_LoadSettings_Name___0___Size___1_" xml:space="preserve">
     <value>Nom : {0}, taille : {1}</value>
   </data>
@@ -898,14 +895,8 @@ Voulez-vous la télécharger ?</value>
   <data name="ShapeType_DrawingRectangle" xml:space="preserve">
     <value>Dessin : Rectangle</value>
   </data>
-  <data name="ShapeType_DrawingRoundedRectangle" xml:space="preserve">
-    <value>Dessin : Rectangle arrondi</value>
-  </data>
   <data name="ShapeType_DrawingStep" xml:space="preserve">
     <value>Dessin : Etape</value>
-  </data>
-  <data name="ShapeType_DrawingText" xml:space="preserve">
-    <value>Dessin : Texte</value>
   </data>
   <data name="ShapeType_DrawingFreehand" xml:space="preserve">
     <value>Dessin : Main levée</value>
@@ -921,9 +912,6 @@ Voulez-vous la télécharger ?</value>
   </data>
   <data name="ShapeType_RegionRectangle" xml:space="preserve">
     <value>Région : Rectangle</value>
-  </data>
-  <data name="ShapeType_RegionRoundedRectangle" xml:space="preserve">
-    <value>Région : Rectangle arrondi</value>
   </data>
   <data name="ShapeType_RegionFreehand" xml:space="preserve">
     <value>Région : Main levée</value>
@@ -942,5 +930,20 @@ Voulez-vous la télécharger ?</value>
   </data>
   <data name="ScrollingCaptureScrollMethod_Automatic" xml:space="preserve">
     <value>Automatiquement essayer toutes les méthodes jusqu'à ce qu'une fonctionne</value>
+  </data>
+  <data name="HotkeyType_ExitShareX" xml:space="preserve">
+    <value>Quitter ShareX</value>
+  </data>
+  <data name="HotkeyType_ToggleActionsToolbar_Category" xml:space="preserve">
+    <value>Autre</value>
+  </data>
+  <data name="HotkeyType_ExitShareX_Category" xml:space="preserve">
+    <value>Autre</value>
+  </data>
+  <data name="RegionCaptureAction_SwapToolType" xml:space="preserve">
+    <value>Changer le type d'outil</value>
+  </data>
+  <data name="ScrollingCaptureScrollMethod_KeyPressPageDown" xml:space="preserve">
+    <value>Simuler un appui sur la touche "Page suivante"</value>
   </data>
 </root>

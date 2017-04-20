@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2016 ShareX Team
+    Copyright (c) 2007-2017 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -29,7 +29,6 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace ShareX
@@ -48,6 +47,17 @@ namespace ShareX
             cbOrientation.Items.AddRange(Enum.GetNames(typeof(Orientation)));
             cbOrientation.SelectedIndex = (int)Options.Orientation;
             nudSpace.SetValue(Options.Space);
+        }
+
+        public ImageCombinerForm(ImageCombinerOptions options, IEnumerable<string> imageFiles) : this(options)
+        {
+            if (imageFiles != null)
+            {
+                foreach (string image in imageFiles)
+                {
+                    lvImages.Items.Add(image);
+                }
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

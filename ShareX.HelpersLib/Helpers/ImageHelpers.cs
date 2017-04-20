@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2016 ShareX Team
+    Copyright (c) 2007-2017 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -604,7 +604,7 @@ namespace ShareX.HelpersLib
 
         public static Image DrawCheckers(Image img)
         {
-            return DrawCheckers(img, 10, Color.LightGray, Color.White);
+            return DrawCheckers(img, 10, Color.FromArgb(230, 230, 230), Color.White);
         }
 
         public static Image DrawCheckers(Image img, int size, Color color1, Color color2)
@@ -612,7 +612,7 @@ namespace ShareX.HelpersLib
             Bitmap bmp = img.CreateEmptyBitmap();
 
             using (Graphics g = Graphics.FromImage(bmp))
-            using (Image checker = CreateCheckers(size, color1, color2))
+            using (Image checker = CreateCheckerPattern(size, size, color1, color2))
             using (Brush checkerBrush = new TextureBrush(checker, WrapMode.Tile))
             using (img)
             {
@@ -629,7 +629,7 @@ namespace ShareX.HelpersLib
             Bitmap bmp = new Bitmap(width, height);
 
             using (Graphics g = Graphics.FromImage(bmp))
-            using (Image checker = CreateCheckers())
+            using (Image checker = CreateCheckerPattern())
             using (Brush checkerBrush = new TextureBrush(checker, WrapMode.Tile))
             {
                 g.FillRectangle(checkerBrush, new Rectangle(0, 0, bmp.Width, bmp.Height));
@@ -638,17 +638,17 @@ namespace ShareX.HelpersLib
             return bmp;
         }
 
-        public static Image CreateCheckers()
+        public static Image CreateCheckerPattern()
         {
-            return CreateCheckers(10, Color.LightGray, Color.White);
+            return CreateCheckerPattern(10, 10);
         }
 
-        public static Image CreateCheckers(int size, Color color1, Color color2)
+        public static Image CreateCheckerPattern(int width, int height)
         {
-            return CreateCheckers(size, size, color1, color2);
+            return CreateCheckerPattern(width, height, Color.FromArgb(230, 230, 230), Color.White);
         }
 
-        public static Image CreateCheckers(int width, int height, Color color1, Color color2)
+        private static Image CreateCheckerPattern(int width, int height, Color color1, Color color2)
         {
             Bitmap bmp = new Bitmap(width * 2, height * 2);
 
@@ -992,10 +992,10 @@ namespace ShareX.HelpersLib
                     {
                         for (int x = 0; x < unsafeBitmap.Width; x += pixelSize)
                         {
-                            int r = 0, g = 0, b = 0, a = 0, count = 0;
-
-                            int yLimit = Math.Min(y + pixelSize, unsafeBitmap.Height);
                             int xLimit = Math.Min(x + pixelSize, unsafeBitmap.Width);
+                            int yLimit = Math.Min(y + pixelSize, unsafeBitmap.Height);
+                            int pixelCount = (xLimit - x) * (yLimit - y);
+                            int r = 0, g = 0, b = 0, a = 0;
 
                             for (int y2 = y; y2 < yLimit; y2++)
                             {
@@ -1007,11 +1007,10 @@ namespace ShareX.HelpersLib
                                     g += color.Green;
                                     b += color.Blue;
                                     a += color.Alpha;
-                                    count++;
                                 }
                             }
 
-                            ColorBgra averageColor = new ColorBgra((byte)(b / count), (byte)(g / count), (byte)(r / count), (byte)(a / count));
+                            ColorBgra averageColor = new ColorBgra((byte)(b / pixelCount), (byte)(g / pixelCount), (byte)(r / pixelCount), (byte)(a / pixelCount));
 
                             for (int y2 = y; y2 < yLimit; y2++)
                             {
@@ -1113,7 +1112,7 @@ namespace ShareX.HelpersLib
             int w = unsafeBitmap.Width;
             int h = unsafeBitmap.Height;
             int halfRange = range / 2;
-            ColorBgra[] newColors = new ColorBgra[w];
+            ColorBgra[] newColors = new ColorBgra[h];
 
             for (int x = 0; x < w; x++)
             {
@@ -1562,7 +1561,7 @@ namespace ShareX.HelpersLib
         {
             if (color.A < 255)
             {
-                using (Image checker = CreateCheckers(rect.Width / 2, rect.Height / 2, Color.LightGray, Color.White))
+                using (Image checker = CreateCheckerPattern(rect.Width / 2, rect.Height / 2))
                 {
                     g.DrawImage(checker, rect);
                 }

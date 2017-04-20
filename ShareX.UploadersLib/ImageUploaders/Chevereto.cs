@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2016 ShareX Team
+    Copyright (c) 2007-2017 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -97,7 +97,14 @@ namespace ShareX.UploadersLib.ImageUploaders
             new CheveretoUploader("https://freshpic.xyz/api/1/upload", "465e94ae768c585e377314d322d690aa"),
             new CheveretoUploader("https://corgi.party/api/v3/sharex", "c91dbf81cbd8aa797a1d12e00822cfa7"),
             new CheveretoUploader("https://imgyukle.com/api/1/upload", "407289b6f603c950af54fbc79311b9b0"),
-            new CheveretoUploader("https://imges.link/sharexapi/1/upload", "nCuBPgNYnHjheiyuXtnH77LrERQrLK44vDrY6HFG")
+            new CheveretoUploader("https://imges.link/sharexapi/1/upload", "nCuBPgNYnHjheiyuXtnH77LrERQrLK44vDrY6HFG"),
+            new CheveretoUploader("https://picsriver.com/api/1/upload", "cf4a1a08a577b6bcf2be2565918c00bd"),
+            new CheveretoUploader("http://ap.imagensbrasil.org/api/1/upload", "9c9dfe77cd3bdbaa7220c6bbaf7452e7"),
+            new CheveretoUploader("https://imgpile.com/api/1/upload", "4a2edc0efeb1596c662d69905674d025"),
+            new CheveretoUploader("https://sekil.az/api/1/upload", "ef32f5599866c115b858d2246e2535ff"),
+            new CheveretoUploader("http://imeggo.com/api/1/upload", "61b66b1ebe8b1dff4eaf3b371f150199"),
+            new CheveretoUploader("https://picr.ws/api/1/upload", "2fbe6bbdac3ceab2e33d47a9a562cef9"),
+            new CheveretoUploader("https://shrn.us/api/1/upload", "d251a10ec8cf7e0f164d6f0f433b93de")
         };
 
         public CheveretoUploader Uploader { get; private set; }
@@ -117,7 +124,7 @@ namespace ShareX.UploadersLib.ImageUploaders
 
             string url = URLHelpers.FixPrefix(Uploader.UploadURL);
 
-            UploadResult result = UploadData(stream, url, fileName, "source", args);
+            UploadResult result = SendRequestFile(url, stream, fileName, "source", args);
 
             if (result.IsSuccess)
             {

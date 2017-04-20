@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2016 ShareX Team
+    Copyright (c) 2007-2017 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -177,12 +177,16 @@ namespace ShareX.HelpersLib
             {
                 using (StringFormat sf = new StringFormat())
                 {
-                    gp.AddString(text, font.FontFamily, (int)font.Style, font.Size, position, sf);
+                    float emSize = g.DpiY * font.SizeInPoints / 72;
+                    gp.AddString(text, font.FontFamily, (int)font.Style, emSize, position, sf);
                 }
 
-                using (Pen borderPen = new Pen(borderColor, borderSize) { LineJoin = LineJoin.Round })
+                if (borderSize > 0)
                 {
-                    g.DrawPath(borderPen, gp);
+                    using (Pen borderPen = new Pen(borderColor, borderSize) { LineJoin = LineJoin.Round })
+                    {
+                        g.DrawPath(borderPen, gp);
+                    }
                 }
 
                 using (Brush textBrush = new SolidBrush(textColor))

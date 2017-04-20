@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2016 ShareX Team
+    Copyright (c) 2007-2017 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -72,6 +72,14 @@ namespace ShareX.HelpersLib
         {
             IntPtr handle = GetForegroundWindow();
             return GetProcessByWindowHandle(handle);
+        }
+
+        public static string GetForegroundWindowProcessName()
+        {
+            using (Process process = GetForegroundWindowProcess())
+            {
+                return process?.ProcessName;
+            }
         }
 
         public static Process GetProcessByWindowHandle(IntPtr hwnd)
@@ -492,6 +500,18 @@ namespace ShareX.HelpersLib
             {
                 ILFree(pidl);
             }
+        }
+
+        public static bool CreateProcess(string path, string arguments, CreateProcessFlags flags = CreateProcessFlags.NORMAL_PRIORITY_CLASS)
+        {
+            PROCESS_INFORMATION pInfo = new PROCESS_INFORMATION();
+            STARTUPINFO sInfo = new STARTUPINFO();
+            SECURITY_ATTRIBUTES pSec = new SECURITY_ATTRIBUTES();
+            SECURITY_ATTRIBUTES tSec = new SECURITY_ATTRIBUTES();
+            pSec.nLength = Marshal.SizeOf(pSec);
+            tSec.nLength = Marshal.SizeOf(tSec);
+
+            return CreateProcess(path, $"\"{path}\" {arguments}", ref pSec, ref tSec, false, (uint)flags, IntPtr.Zero, null, ref sInfo, out pInfo);
         }
     }
 }

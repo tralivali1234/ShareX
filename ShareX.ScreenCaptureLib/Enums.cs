@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2016 ShareX Team
+    Copyright (c) 2007-2017 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -51,6 +51,8 @@ namespace ShareX.ScreenCaptureLib
         Monitor,
         ActiveMonitor,
         AnnotateRunAfterCaptureTasks,
+        AnnotateContinueTask,
+        AnnotateCancelTask,
         AnnotateSaveImage,
         AnnotateSaveImageAs,
         AnnotateCopyImage,
@@ -96,7 +98,11 @@ namespace ShareX.ScreenCaptureLib
         [Description("Animated GIF (gif)")]
         gif,
         [Description("x265 (mp4)")]
-        libx265
+        libx265,
+        [Description("H.264 NVENC (mp4)")]
+        h264_nvenc,
+        [Description("HEVC NVENC (mp4)")]
+        hevc_nvenc
     }
 
     public enum FFmpegPreset
@@ -119,6 +125,34 @@ namespace ShareX.ScreenCaptureLib
         slower,
         [Description("Very slow")]
         veryslow
+    }
+
+    public enum FFmpegNVENCPreset
+    {
+        [Description("Default")]
+        @default,
+        [Description("High quality 2 passes")]
+        slow,
+        [Description("High quality 1 pass")]
+        medium,
+        [Description("High performance 1 pass")]
+        fast,
+        [Description("High performance")]
+        hp,
+        [Description("High quality")]
+        hq,
+        [Description("Bluray disk")]
+        bd,
+        [Description("Low latency")]
+        ll,
+        [Description("Low latency high quality")]
+        llhq,
+        [Description("Low latency high performance")]
+        llhp,
+        [Description("Lossless")]
+        lossless,
+        [Description("Lossless high performance")]
+        losslesshp
     }
 
     public enum FFmpegTune
@@ -158,7 +192,8 @@ namespace ShareX.ScreenCaptureLib
         ScreenColorPicker,
         Ruler,
         OneClick,
-        Editor
+        Editor,
+        TaskEditor
     }
 
     public enum RegionCaptureAction // Localized
@@ -182,16 +217,15 @@ namespace ShareX.ScreenCaptureLib
     public enum ShapeType // Localized
     {
         RegionRectangle,
-        RegionRoundedRectangle,
         RegionEllipse,
         RegionFreehand,
         DrawingRectangle,
-        DrawingRoundedRectangle,
         DrawingEllipse,
         DrawingFreehand,
         DrawingLine,
         DrawingArrow,
-        DrawingText,
+        DrawingTextOutline,
+        DrawingTextBackground,
         DrawingSpeechBalloon,
         DrawingStep,
         DrawingImage,
